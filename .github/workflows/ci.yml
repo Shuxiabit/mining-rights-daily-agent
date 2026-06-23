@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: python -m pip install uv==0.11.23
+      - name: Install locked dependencies
+        run: uv sync --locked --extra dev
+      - name: Ruff lint
+        run: uv run ruff check .
+      - name: Ruff format
+        run: uv run ruff format --check .
+      - name: Type check
+        run: uv run mypy agent common mining_news_mcp mineral_pdf_mcp lme_price_mcp
+      - name: Tests and coverage
+        env:
+          MINING_AGENT_OFFLINE: "1"
+        run: uv run pytest --cov --cov-report=term-missing --cov-report=xml
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-xml
+          path: coverage.xml
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate Compose
+        run: docker compose config
+      - name: Build image
+        run: docker build --tag mining-rights-daily-agent:ci .
+      - name: Offline smoke test
+        run: >-
+          docker run --rm
+          -e MINING_AGENT_OFFLINE=1
+          mining-rights-daily-agent:ci
+          "给我生成一份关于 Pilbara 锂矿的今日简报"
+          --direct

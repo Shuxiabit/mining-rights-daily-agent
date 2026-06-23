@@ -1,0 +1,14 @@
+services:
+  mining-daily-agent:
+    build: .
+    environment:
+      MINING_AGENT_OFFLINE: ${MINING_AGENT_OFFLINE:-0}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4.1-mini}
+    volumes:
+      - ./output:/app/output
+    command:
+      - "给我生成一份关于 Pilbara 锂矿的今日简报"
+      - "--output"
+      - "output/pilbara-brief.md"
