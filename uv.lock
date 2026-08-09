@@ -561,7 +561,7 @@ requires-dist = [
     { name = "mcp", specifier = ">=1.27,<2" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.15,<2" },
     { name = "openai", specifier = ">=1.68,<3" },
-    { name = "pypdf", specifier = ">=5.3,<7" },
+    { name = "pypdf", specifier = ">=6.15.0,<7" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3,<9" },
     { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.25,<1" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6,<8" },
@@ -807,11 +807,11 @@ crypto = [
 
 [[package]]
 name = "pypdf"
-version = "6.14.1"
+version = "6.15.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b0/91/4c422e3b1a6f9fabbd7989cc4f8a84df5898ceac0862d4c9cfc1ab26c200/pypdf-6.14.1.tar.gz", hash = "sha256:03c76aa9cc6dfda76d33d8e19f17d271efb6a7606913a72cf973a649db9743a3", size = 6490965, upload-time = "2026-06-23T11:52:03.752Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/17/17/ee75a92718ec7212de831e71454d702225aa5e474a805cce169806044453/pypdf-6.15.0.tar.gz", hash = "sha256:d39c4d955a76409284a905e2d65b40076d77ab76129e0faaeeb6612403ecfc79", size = 6993794, upload-time = "2026-08-06T13:06:49.929Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/df/b4/eedf61e574ef0034177d7861cd701b321c392ab36e1670f2aadbb60da7fc/pypdf-6.14.1-py3-none-any.whl", hash = "sha256:f12434c49fd4c771b92ea2cc176df16d6c5488fc123d4ab4ee3a344e151f685c", size = 349494, upload-time = "2026-06-23T11:52:01.661Z" },
+    { url = "https://files.pythonhosted.org/packages/af/72/ce3067ac31e214a66388159f8462ddb8c13dd00170f24d555a1f1ae8ee91/pypdf-6.15.0-py3-none-any.whl", hash = "sha256:14e001d6504822cb1ca9c7ed9a69bccb320f59b320730f55af804361abe4d5ee", size = 378123, upload-time = "2026-08-06T13:06:47.709Z" },
 ]
 
 [[package]]
