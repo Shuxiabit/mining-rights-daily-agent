@@ -3,8 +3,8 @@ revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.15' and sys_platform == 'win32'",
-    "python_full_version == '3.14.*' and sys_platform == 'win32'",
     "python_full_version >= '3.15' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'win32'",
     "python_full_version == '3.14.*' and sys_platform != 'win32'",
     "python_full_version < '3.14' and sys_platform == 'win32'",
     "python_full_version < '3.14' and sys_platform != 'win32'",
@@ -807,11 +807,11 @@ crypto = [
 
 [[package]]
 name = "pypdf"
-version = "6.14.1"
+version = "6.16.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b0/91/4c422e3b1a6f9fabbd7989cc4f8a84df5898ceac0862d4c9cfc1ab26c200/pypdf-6.14.1.tar.gz", hash = "sha256:03c76aa9cc6dfda76d33d8e19f17d271efb6a7606913a72cf973a649db9743a3", size = 6490965, upload-time = "2026-06-23T11:52:03.752Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b6/5a/df92d1c1ef8806ca28f20f978ee059894868d93de797a7e2edebe7fe1a43/pypdf-6.16.1.tar.gz", hash = "sha256:c4d1b43ddae921387321cf63936cd16a7743b91d2da92f165c149a195c972ba9", size = 7003737, upload-time = "2026-08-14T12:24:04.531Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/df/b4/eedf61e574ef0034177d7861cd701b321c392ab36e1670f2aadbb60da7fc/pypdf-6.14.1-py3-none-any.whl", hash = "sha256:f12434c49fd4c771b92ea2cc176df16d6c5488fc123d4ab4ee3a344e151f685c", size = 349494, upload-time = "2026-06-23T11:52:01.661Z" },
+    { url = "https://files.pythonhosted.org/packages/33/a1/724b18d6757ab7253a8fecd3a430eb8d980ed26872ba16651e7b5ddfc63f/pypdf-6.16.1-py3-none-any.whl", hash = "sha256:63fec31c4092ae50b6729beedcb469055b60d20c834bde1c402df241f371f644", size = 382924, upload-time = "2026-08-14T12:24:02.854Z" },
 ]
 
 [[package]]
